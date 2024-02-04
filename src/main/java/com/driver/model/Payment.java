@@ -11,7 +11,7 @@ public class Payment {
 
         private Boolean paymentCompleted;
 
-        @Enumerated
+        @Enumerated(EnumType.STRING)
         private PaymentMode paymentMode;
 
         @OneToOne
@@ -53,9 +53,8 @@ public class Payment {
 
     }
 
-    public PaymentMode getPaymentMode(){
-        
-        return paymentMode;
+    public boolean isPaymentCompleted() {
+        return paymentCompleted;
     }
 
     public void setPaymentMode(PaymentMode paymentMode) {
