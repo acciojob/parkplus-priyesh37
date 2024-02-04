@@ -53,7 +53,8 @@ public class Payment {
 
     }
 
-    public PaymentMode getPaymentMode() {
+    public PaymentMode getPaymentMode(){
+        
         return paymentMode;
     }
 
