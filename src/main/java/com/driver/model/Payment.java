@@ -33,6 +33,7 @@ public class Payment {
     }
 
     public void setPaymentCompleted(Boolean paymentCompleted) {
+
         this.paymentCompleted = paymentCompleted;
     }
 
