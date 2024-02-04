@@ -20,11 +20,12 @@ public class UserController {
 
     @PutMapping("/update")
     public ResponseEntity<User> updatePassword(@RequestParam Integer userId, @RequestParam String password){
-        userService.updatePassword(userId, password)
+        User updatedUser = userService.updatePassword(userId, password);
         return new ResponseEntity<>(updatedUser, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete")
     public void deleteUser(@RequestParam Integer userId){
+        userService.deleteUser(userId);
     }
 }
